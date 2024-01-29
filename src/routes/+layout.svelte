@@ -1,4 +1,5 @@
 <script>
+    import '../global.scss'
     /** @type {import('./$types').LayoutData} */
     // export let data;
 
@@ -9,7 +10,6 @@
 <slot/>
 
 <style lang="scss">
-    @import '../global.scss';
 </style>
 
 <svelte:head>
