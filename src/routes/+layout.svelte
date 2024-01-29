@@ -1,6 +1,6 @@
 <script>
     /** @type {import('./$types').LayoutData} */
-    export let data;
+    // export let data;
 
     import Navbar from './Navbar.svelte';
 </script>
@@ -9,5 +9,9 @@
 <slot/>
 
 <style lang="scss">
-    @import 'src/global.scss';
+    @import '../global.scss';
 </style>
+
+<svelte:head>
+    <title>Team Anant PSD</title>
+</svelte:head>
