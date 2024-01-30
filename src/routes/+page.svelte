@@ -6,5 +6,3 @@
 <Intro />
 <About />
 
-<style lang="scss">
-</style>

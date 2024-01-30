@@ -1,5 +1,4 @@
 <script>
-    import hackerImg from "$assets/hacker.png"
 </script>
 
 <section class="intro">
@@ -57,9 +56,7 @@
 			</div>
 		</article>
 
-        <div class="imgContainer">
-            <img src={hackerImg} alt="Hacker">
-        </div>
+		<div class="imgContainer"></div>
 	</main>
 </section>
 
@@ -68,7 +65,7 @@
 		width: 100%;
 		height: 100dvh;
 
-		padding-inline: 5%;
+		padding : 0 5%;
 
 		display: flex;
 
@@ -87,16 +84,16 @@
 			align-items: center;
 		}
 		main {
-			width: auto;
+			width: calc(100% - 100px);
 			height: 100%;
-            
+
 			flex-grow: 1;
 			flex-shrink: 0;
-            
+
 			padding-top: 120px;
 			padding-bottom: 70px;
 
-            display: flex;
+			display: flex;
 		}
 	}
 
@@ -147,6 +144,10 @@
 
 			padding-inline: 11%;
 
+			@media screen and (max-width: 1500px) {
+				padding: 0 0 0 3%;
+			}
+
 			.preText {
 				font-size: 1.5rem;
 				color: var(--primary-white);
@@ -160,63 +161,94 @@
 				color: var(--hover-white);
 			}
 
-            .buttons{
-                width: 100%;
-                height: max-content;
+			.buttons {
+				width: 100%;
+				height: max-content;
 
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 20px;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				gap: 20px;
 
-                padding-top: 40px;
+				padding-top: 40px;
 
-                button{
-                    width: 40%;
-                    border-radius: 10px;
-                    padding-block: 1rem;
+				button {
+					width: 40%;
+					border-radius: 10px;
+					padding-block: 1rem;
 
-                    font-size: 1.2rem;
+					font-size: 1.2rem;
 
-                    cursor: pointer;
-                    transition: all 0.2s ease-in-out;
-                }
+					cursor: pointer;
+					transition: all 0.2s ease-in-out;
+				}
 
-                .hire{
-                    background-color: var(--primary-orange);
-                    color: var(--secondary-black);
+				.hire {
+					background-color: var(--primary-orange);
+					color: var(--secondary-black);
 
-                    &:hover{
-                        background-color: transparent;
-                        color: var(--primary-orange);
-                        border: 2px solid var(--primary-orange);
-                    }
-                }
-                .know{
-                    background-color: transparent;
-                    color: var(--primary-orange);
-                    border: 2px solid var(--primary-orange);
+					&:hover {
+						background-color: transparent;
+						color: var(--primary-orange);
+						border: 2px solid var(--primary-orange);
+					}
+				}
+				.know {
+					background-color: transparent;
+					color: var(--primary-orange);
+					border: 2px solid var(--primary-orange);
 
-                    &:hover{
-                        background-color: var(--primary-orange);
-                        color: var(--secondary-black);
-                    }
-                }
-            }
+					&:hover {
+						background-color: var(--primary-orange);
+						color: var(--secondary-black);
+					}
+				}
+			}
 		}
 	}
 
-    .imgContainer{
-        width: 45%;
-        height: 100%;
+	.imgContainer {
+		width: 45%;
+		height: 100%;
 
-        display: grid;
-        place-items: center;
+		background-image: url('$assets/hacker.png');
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 
-        img{
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-    }
+	@media screen and (max-width: 1500px) {
+		.textInfo {
+			padding-inline: 0;
+		}
+	}
+
+	@media screen and (max-width: 1200px) {
+		main {
+			flex-direction: column-reverse;
+			align-items: center;
+
+			.textInfo {
+				width: 75%;
+			}
+			.imgContainer {
+				width: 75%;
+				// display: none;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.socialsWrapper {
+			display: none !important;
+		}
+		main{
+			width: 100%;
+
+			.textInfo{
+				padding: 0;
+				width: 85%;
+			}
+		}
+	}
 </style>
