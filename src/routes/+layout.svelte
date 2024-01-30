@@ -1,17 +1,14 @@
 <script>
-    import '../global.scss'
-    /** @type {import('./$types').LayoutData} */
-    // export let data;
-
-    import Navbar from './Navbar.svelte';
+	import '../global.scss';
+	import Navbar from './Navbar.svelte';
 </script>
 
-<Navbar/>
-<slot/>
+<Navbar />
+<slot />
+
+<svelte:head>
+	<title>Team Anant PSD</title>
+</svelte:head>
 
 <style lang="scss">
 </style>
-
-<svelte:head>
-    <title>Team Anant PSD</title>
-</svelte:head>
