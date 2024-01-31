@@ -26,40 +26,40 @@
 </footer>
 
 <style lang="scss">
-    footer{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 10%;
-        height: fit-content;
-        background-color: var(--tertiery-black);
-        color: white;
-        font-size: 1.5rem;
+	footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px 10%;
+		height: fit-content;
+		background-color: var(--tertiery-black);
+		color: white;
+		font-size: 1.5rem;
 
-        .leftText{
-            font-size: 1.2rem;
-            font-weight: 400;
-        }
-        .socials{
-            display: flex;
-            justify-content: space-between;
-            width: 10rem;
-            svg{
-                cursor: pointer;
-                path{
-                    transition: all 0.3s ease-in-out;
-                }
-                &:hover{
-                    path{
-                        fill: var(--primary-orange);
-                    }
-                }
-            }
-        }
+		.leftText {
+			font-size: 1.2rem;
+			font-weight: 400;
+		}
+		.socials {
+			display: flex;
+			justify-content: space-between;
+			width: 10rem;
+			svg {
+				cursor: pointer;
+				path {
+					transition: all 0.3s ease-in-out;
+				}
+				&:hover {
+					path {
+						fill: var(--primary-orange);
+					}
+				}
+			}
+		}
 
-        @media screen and (max-width: 768px){
-            flex-direction: column;
-            gap: 1rem;
-        }
-    }
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+			gap: 1rem;
+		}
+	}
 </style>
