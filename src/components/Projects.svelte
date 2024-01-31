@@ -66,7 +66,7 @@
 		justify-content: center;
 		align-items: center;
 
-		margin-block: 50px;
+		margin-block: 150px;
 
 		.projectContainer {
 			width: 100%;

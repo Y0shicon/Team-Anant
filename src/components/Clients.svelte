@@ -23,7 +23,7 @@
 </script>
 
 <section id="clients">
-	<h1 class="title">MY CLIENTS</h1>
+	<h1 class="title">WHAT MY CLIENTS SAY..</h1>
 	<div class="clientContainer">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -84,6 +84,8 @@
 		align-items: center;
 
 		padding: 0 5%;
+
+		margin-block: 150px;
 	}
 
 	.clientContainer {
