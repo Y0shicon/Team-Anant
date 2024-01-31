@@ -129,34 +129,6 @@
 		align-items: center;
 
 		margin-block: 50px;
-
-		.title {
-			width: fit-content;
-			height: fit-content;
-
-			font-size: 2.5rem;
-			font-weight: 700;
-			color: var(--primary-orange);
-
-			text-align: center;
-
-			position: relative;
-
-			&::after {
-				content: '';
-				width: 50%;
-				height: 5px;
-
-				background-color: var(--primary-orange);
-
-				position: absolute;
-				bottom: -10px;
-				left: 50%;
-				transform: translateX(-50%);
-
-				border-radius: 2px;
-			}
-		}
 	}
 
 	.container {
