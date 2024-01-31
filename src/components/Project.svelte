@@ -1,9 +1,17 @@
 <script>
 	export let project;
 
-    // import portfolio from '/projects/portfolio.png';
-    // import restaurant from '/projects/restaurant.png';
-    // import social from '/projects/social-media.png';
+	import portfolio from '$assets/projects/portfolio.png';
+	import restaurant from '$assets/projects/restaurant.png';
+	import social from '$assets/projects/social-media.png';
+
+	if (project.image === 'portfolio.png') {
+	    project.image = portfolio;
+	} else if (project.image === 'restaurant.png') {
+	    project.image = restaurant;
+	} else if (project.image === 'social-media.png'){
+	    project.image = social;
+	}
 </script>
 
 <div class="project" style="background-image: url({project.image});"></div>
@@ -13,9 +21,9 @@
 		width: 300px;
 		aspect-ratio: 1.27;
 
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 
 		border-radius: 10px;
 

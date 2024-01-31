@@ -19,6 +19,7 @@
             tab.classList.remove('active');
         });
         e.target.parentElement.classList.add('active');
+		e.target.classList.add('active');
     };
 </script>
 
@@ -26,9 +27,9 @@
 	<h1 class="title">MY PROJECTS</h1>
 	<div class="projectContainer">
 		<div class="tabList">
-			<button on:click={changeTab} class="tab active"><span data-tab="graphic">Graphic Designer</span></button>
-			<button on:click={changeTab} class="tab"><span data-tab="ui/ux">UI - UX</span></button>
-			<button on:click={changeTab} class="tab"><span data-tab="socialMedia">Social Media</span></button>
+			<button data-tab="graphic" on:click={changeTab} class="tab active"><span data-tab="graphic">Graphic Designer</span></button>
+			<button data-tab="ui/ux" on:click={changeTab} class="tab"><span data-tab="ui/ux">UI - UX</span></button>
+			<button data-tab="socialMedia" on:click={changeTab} class="tab"><span data-tab="socialMedia">Social Media</span></button>
 		</div>
 		<div class="projectList">
 			{#each data as project (project.id)}

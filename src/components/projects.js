@@ -5,32 +5,32 @@ export const projects = [
         {
           id : 1,
           name: "portfolio",
-          image: "https://github.com/Y0shicon/Team-Anant/blob/main/public/projects/portfolio.png"
+          image: "portfolio.png"
         },
         {
           id : 2,
           name: "social media",
-          image: "/projects/social-media.png"
+          image: "social-media.png"
         },
         {
           id : 3,
           name: "restaurant",
-          image: "/projects/restaurant.png"
+          image: "restaurant.png"
         },
         {
           id : 4,
           name: "portfolio",
-          image: "/projects/portfolio.png"
+          image: "portfolio.png"
         },
         {
           id : 5,
           name: "restaurant",
-          image: "/projects/restaurant.png"
+          image: "restaurant.png"
         },
         {
           id : 6,
           name: "social media",
-          image: "/projects/social-media.png"
+          image: "social-media.png"
         }
       ]
     },
@@ -38,29 +38,29 @@ export const projects = [
       type : "ui/ux",
       data : [
         {
-          id : 1,
+          id : 7,
           name: "portfolio",
-          image: "/projects/portfolio.png"
+          image: "portfolio.png"
         },
         {
-          id : 2,
+          id : 8,
           name: "restaurant",
-          image: "/projects/restaurant.png"
+          image: "restaurant.png"
         },
         {
-          id : 3,
+          id : 9,
           name: "social media",
-          image: "/projects/social-media.png"
+          image: "social-media.png"
         },
         {
-          id : 4,
+          id : 10,
           name: "restaurant",
-          image: "/projects/restaurant.png"
+          image: "restaurant.png"
         },
         {
-          id : 5,
+          id : 11,
           name: "social media",
-          image: "/projects/social-media.png"
+          image: "social-media.png"
         }
       ]
     },
@@ -68,35 +68,35 @@ export const projects = [
       type : "socialMedia",
       data: [
         {
-          id : 1,
-          name: "portfolio",
-          image: "/projects/portfolio.png"
-        },
-        {
-          id : 2,
-          name: "social media",
-          image: "/projects/social-media.png"
-        },
-        {
-          id : 3,
+          id : 14,
           name: "restaurant",
-          image: "/projects/restaurant.png"
+          image: "restaurant.png"
         },
         {
-          id : 4,
-          name: "portfolio",
-          image: "/projects/portfolio.png"
-        },
-        {
-          id : 5,
-          name: "restaurant",
-          image: "/projects/restaurant.png"
-        },
-        {
-          id : 6,
+          id : 13,
           name: "social media",
-          image: "/projects/social-media.png"
-        }
+          image: "social-media.png"
+        },
+        {
+          id : 15,
+          name: "portfolio",
+          image: "portfolio.png"
+        },
+        {
+          id : 12,
+          name: "portfolio",
+          image: "portfolio.png"
+        },
+        {
+          id : 17,
+          name: "social media",
+          image: "social-media.png"
+        },
+        {
+          id : 16,
+          name: "restaurant",
+          image: "restaurant.png"
+        },
       ]
     }
   ]
