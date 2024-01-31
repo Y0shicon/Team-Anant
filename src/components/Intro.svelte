@@ -63,9 +63,9 @@
 <style lang="scss">
 	.intro {
 		width: 100%;
-		height: 100dvh;
+		height: 100lvh;
 
-		padding : 0 5%;
+		padding: 0 5%;
 
 		display: flex;
 
@@ -242,19 +242,19 @@
 		.socialsWrapper {
 			display: none !important;
 		}
-		main{
+		main {
 			width: 100%;
 			height: fit-content;
 
-			.imgContainer{
+			.imgContainer {
 				min-height: 200px;
 			}
 
-			.textInfo{
+			.textInfo {
 				padding: 0;
 				width: 85%;
 
-				h1{
+				h1 {
 					font-size: 2.5rem;
 				}
 			}

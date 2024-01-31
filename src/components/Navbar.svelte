@@ -7,6 +7,13 @@
 		const hamLines = document.querySelectorAll('.hamLine');
 		const hamMenu = document.querySelector('.hamMenu');
 
+		// Toggle ham menu on click of links
+		document.querySelectorAll('.hamMenu a').forEach((link) => {
+			link.addEventListener('click', () => {
+				hamBut.click();
+			});
+		});
+
 		const toggleHam = () => {
 			hamLines.forEach((line) => {
 				line.classList.toggle('active');
@@ -59,6 +66,8 @@
 
 <style lang="scss">
 	.navbar {
+		z-index: 10;
+
 		display: flex;
 		color: #fff;
 		padding: 5px 5%;
@@ -170,10 +179,11 @@
 		position: fixed;
 		top: 0;
 		right: 0;
-		width: 60vw;
+		width: 100vw;
 		height: 100vh;
 
 		z-index: -1;
+		opacity: 0.94;
 
 		background-color: var(--secondary-black);
 

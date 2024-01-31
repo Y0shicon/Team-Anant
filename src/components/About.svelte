@@ -58,7 +58,7 @@
 <style lang="scss">
 	#about {
 		width: 100%;
-		height: 100dvh;
+		height: 100lvh;
 
 		padding-inline: 5%;
 
@@ -73,7 +73,7 @@
 		flex-shrink: 0;
 		flex-grow: 1;
 
-        margin-inline: 5%;
+		margin-inline: 5%;
 
 		background-image: url('$assets/aboutImg.png');
 		background-size: contain;
@@ -128,28 +128,27 @@
 		}
 	}
 
-    @media screen and (max-width : 1100px){
-        .mainText{
-            padding : 0 0 0 5%;
-        }
-        .imgContainer{
-            width: 40%;
-            margin: 0;
-        }
-    }
+	@media screen and (max-width: 1100px) {
+		.mainText {
+			padding: 0 0 0 5%;
+		}
+		.imgContainer {
+			width: 40%;
+			margin: 0;
+		}
+	}
 
-    @media screen and (max-width : 950px){
+	@media screen and (max-width: 950px) {
+	}
 
-    }
-
-    @media screen and (max-width : 868px){
-        #about{
-            flex-direction: column;
+	@media screen and (max-width: 868px) {
+		#about {
+			flex-direction: column;
 			height: fit-content;
-        }
-        .imgContainer{
-            width: 55%;
+		}
+		.imgContainer {
+			width: 55%;
 			min-height: 250px;
-        }
-    }
+		}
+	}
 </style>
