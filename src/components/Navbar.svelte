@@ -71,6 +71,9 @@
 
 		transition: all 0.3s ease-in-out;
 
+		display: flex;
+		align-items: center;
+
 		&:global(.scrollActive) {
 			background-color: var(--secondary-orange);
 			height: 90px;
@@ -78,9 +81,15 @@
 
 		.logo {
 			margin-right: auto;
+			aspect-ratio: 1/1;
+			height: 100%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
 			img {
-				height: 100%;
+				height: 90%;
 				aspect-ratio: 1/1;
 				object-fit: contain;
 
@@ -119,9 +128,6 @@
 
 				&:hover::after {
 					width: 100%;
-				}
-				@media screen and (max-width: 768px) {
-					display: none;
 				}
 			}
 		}
@@ -189,6 +195,9 @@
 		}
 	}
 
-	@media screen and (max-width: 1400px) {
+	@media screen and (max-width: 768px) {
+		.links a{
+			display: none !important;
+		}
 	}
 </style>
