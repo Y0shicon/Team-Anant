@@ -1,4 +1,7 @@
 <script>
+	import { fade, scale } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+
 	export let project;
 
 	import portfolio from '$assets/projects/portfolio.png';
@@ -14,7 +17,10 @@
 	}
 </script>
 
-<div class="project" style="background-image: url({project.image});"></div>
+<div
+	class="project"
+	style="background-image: url({project.image});"
+></div>
 
 <style lang="scss">
 	.project {

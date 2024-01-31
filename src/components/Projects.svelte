@@ -135,7 +135,7 @@
 					}
 				}
 
-				@media screen and (max-width: 768px){
+				@media screen and (max-width: 768px) {
 					display: none;
 				}
 			}
@@ -172,7 +172,7 @@
 				display: grid;
 				place-items: center;
 
-				font-size: 1.5rem;
+				font-size: 1rem;
 				font-weight: 400;
 
 				color: var(--primary-white);
