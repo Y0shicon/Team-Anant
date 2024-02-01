@@ -2,25 +2,25 @@
     // Adding carouse functionality to the left and right button
     import { onMount } from 'svelte';
 
-    let index = 1;
-    let translate = 0;
+    let index = 0;
+    let translate = 35;
 
     onMount(() => {
         const leftBtn = document.querySelector('.leftBtn');
         const rightBtn = document.querySelector('.rightBtn');
 
         rightBtn.addEventListener('click', () => {
-            if (index > 0) {
-                index--;
-                translate -= 36;
+            if (index < 2) {
+                index++;
+                translate -= 35;
                 document.querySelector('.translator').style.transform = `translateX(${translate}%)`;
             }
         });
 
         leftBtn.addEventListener('click', () => {
-            if (index < 2) {
-                index++;
-                translate += 36;
+            if (index > 0) {
+                index--;
+                translate += 35;
                 document.querySelector('.translator').style.transform = `translateX(${translate}%)`;
             }
         });
@@ -156,6 +156,10 @@
             @media screen and (max-width: 1200px) and (min-width: 1000px) {
                 gap: 30px;
             }
+
+			@media screen and (max-width: 1000px) {
+				transform: translateX(35%);
+			}
 		}
 	}
 

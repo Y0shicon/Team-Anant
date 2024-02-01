@@ -1,22 +1,99 @@
 <script>
+	let name, email, message, data;
+	let isNameValid = false,
+		isEmailValid = false,
+		isMessageValid = false,
+		success = false;
+
+	$: data = { name, email, message };
+
+	// Form Validation
+	$: {
+		if (name?.length > 0) {
+			isNameValid = true;
+		} else {
+			isNameValid = false;
+		}
+
+		if (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+			isEmailValid = true;
+		} else {
+			isEmailValid = false;
+		}
+
+		if (message?.length > 0) {
+			isMessageValid = true;
+		} else {
+			isMessageValid = false;
+		}
+	}
+
+	const handleSubmit = (e) => {
+		console.log(name, email, message);
+
+		// Async function to send the data to the backend
+		const sendData = async () => {
+			const res = await fetch('http://localhost:3000/api', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			});
+
+			const resData = await res.json();
+			console.log(resData);
+		};
+
+		if (isNameValid && isEmailValid && isMessageValid) {
+			sendData();
+			alert('Form submitted successfully');
+			name = '';
+			email = '';
+			message = '';
+		} else if (!isNameValid) {
+			alert('Please enter a valid name');
+		} else if (!isEmailValid) {
+			alert('Please enter a valid email');
+		} else if (!isMessageValid) {
+			alert('Please enter a valid message');
+		}
+	};
 </script>
 
 <section id="contact">
 	<h1 class="title">GET IN TOUCH</h1>
 	<div class="contactContainer">
 		<div class="form">
-			<form action="">
+			<form action="" on:submit|preventDefault={handleSubmit}>
 				<div class="inputWrapper">
 					<!-- <label for="name">Name</label> -->
-					<input type="text" name="name" id="name" placeholder="Enter your name" />
+					<input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="Enter your name"
+						bind:value={name}
+					/>
 				</div>
 				<div class="inputWrapper">
 					<!-- <label for="email">Email</label> -->
-					<input type="email" name="email" id="email" placeholder="Enter your email" />
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="Enter your email"
+						bind:value={email}
+					/>
 				</div>
 				<div class="inputWrapper">
 					<!-- <label for="message">Message</label> -->
-					<textarea name="message" id="message" placeholder="Enter your message"></textarea>
+					<textarea
+						name="message"
+						id="message"
+						placeholder="Enter your message"
+						bind:value={message}
+					></textarea>
 				</div>
 				<button type="submit">Submit</button>
 			</form>

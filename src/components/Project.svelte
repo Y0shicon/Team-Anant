@@ -18,6 +18,7 @@
 </script>
 
 <div
+	in:fade={{ duration: 300, delay: 100, easing: quintOut }}
 	class="project"
 	style="background-image: url({project.image});"
 ></div>
