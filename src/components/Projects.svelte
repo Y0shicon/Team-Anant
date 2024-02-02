@@ -1,5 +1,5 @@
 <script>
-	import { projects } from './projects';
+	import { projects } from '$utils/projects';
 	import Project from './Project.svelte';
 
 	let tab = 'graphic';

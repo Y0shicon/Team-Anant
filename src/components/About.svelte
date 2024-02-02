@@ -1,20 +1,21 @@
 <script>
+	import {slideIn, fade, scale} from '$utils/useViewport.js';
 </script>
 
 <section id="about">
-	<div class="imgContainer" />
+	<div class="imgContainer" use:scale/>
 	<article class="mainText">
-		<h1>ABOUT ME</h1>
-		<p>
+		<h1 use:slideIn>ABOUT ME</h1>
+		<p use:slideIn>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
 		</p>
-		<p>
+		<p use:slideIn>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 			labore et dolore magna aliqua.
 		</p>
-		<span>Follow My work on</span>
-		<div class="socials">
+		<span use:fade>Follow My work on</span>
+		<div class="socials" use:slideIn>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="39"

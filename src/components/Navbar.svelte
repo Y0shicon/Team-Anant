@@ -25,8 +25,8 @@
 			if (window.scrollY > 20) {
 				document.querySelector('.navbar').classList.add('scrollActive');
 				document.querySelector('.navbar').style.opacity = 1;
-			// } else if (window.scrollY >= window.innerHeight) {
-			// 	document.querySelector('.navbar').style.opacity = 0;
+				// } else if (window.scrollY >= window.innerHeight) {
+				// 	document.querySelector('.navbar').style.opacity = 0;
 			} else {
 				document.querySelector('.navbar').style.opacity = 1;
 				document.querySelector('.navbar').classList.remove('scrollActive');
@@ -47,9 +47,9 @@
 	</div>
 	<div class="links">
 		<a href="/">Home</a>
-		<a href="/">About</a>
-		<a href="/">Services</a>
-		<a href="/">Contact</a>
+		<a href="/about">About</a>
+		<a href="/services">Services</a>
+		<a href="/contact">Contact</a>
 		<button class="hamBut">
 			<div class="hamLine"></div>
 			<div class="hamLine"></div>
@@ -58,9 +58,9 @@
 	</div>
 	<div class="hamMenu">
 		<a href="/">Home</a>
-		<a href="/">About</a>
-		<a href="/">Services</a>
-		<a href="/">Contact</a>
+		<a href="/about">About</a>
+		<a href="/services">Services</a>
+		<a href="/contact">Contact</a>
 	</div>
 </nav>
 
@@ -206,7 +206,7 @@
 	}
 
 	@media screen and (max-width: 768px) {
-		.links a{
+		.links a {
 			display: none !important;
 		}
 	}

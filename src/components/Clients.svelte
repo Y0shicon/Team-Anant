@@ -1,6 +1,6 @@
 <script>
 	import Client from '$components/Client.svelte';
-	import { data } from './clients.js';
+	import { data } from '$utils/clients.js';
 
 	let index = 0;
 

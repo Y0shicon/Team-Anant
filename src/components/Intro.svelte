@@ -1,7 +1,8 @@
 <script>
+	import {fade, slideIn, scale} from '$utils/useViewport.js';
 </script>
 
-<section class="intro">
+<section class="intro" use:fade>
 	<aside class="socialsWrapper">
 		<div class="line" />
 		<div class="socials">

@@ -12,17 +12,15 @@
 <script>
 	export let status;
 	export let message;
+
 	let count = 5;
+	$ : count === 0 && window.location.replace('/');
 
 	import { onMount } from 'svelte';
 
 	console.log(status, message);
 
 	onMount(() => {
-		setTimeout(() => {
-			window.location.href = '/';
-		}, 5000);
-
 		const interval = setInterval(() => {
 			count--;
 		}, 1000);
