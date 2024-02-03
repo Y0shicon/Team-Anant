@@ -130,7 +130,7 @@
 					transition: fill 0.2s ease-in-out;
 				}
 
-				&:hover path {
+				&:hover path , &:focus path, &:active path, &:focus-within path{
 					fill: var(--primary-orange);
 				}
 			}
@@ -192,7 +192,7 @@
 					background-color: var(--primary-orange);
 					color: var(--secondary-black);
 
-					&:hover {
+					&:hover , &:focus, &:active, &:focus-within {
 						background-color: transparent;
 						color: var(--primary-orange);
 						border: 2px solid var(--primary-orange);
@@ -203,7 +203,7 @@
 					color: var(--primary-orange);
 					border: 2px solid var(--primary-orange);
 
-					&:hover {
+					&:hover , &:focus, &:active, &:focus-within{
 						background-color: var(--primary-orange);
 						color: var(--secondary-black);
 					}

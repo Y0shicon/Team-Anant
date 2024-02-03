@@ -122,10 +122,10 @@
 							transition: all 0.3s ease-in-out;
 						}
 					}
-					&:hover {
+					&:hover, &:focus, &:active, &:focus-within{
 						cursor: pointer;
 					}
-					&:hover span::after {
+					&:hover span::after , &:focus span::after, &:active span::after, &:focus-within span::after{
 						width: 100%;
 					}
 

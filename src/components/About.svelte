@@ -119,7 +119,7 @@
 					transition: fill 0.3s ease-in-out;
 				}
 
-				&:hover {
+				&:hover , &:focus, &:active, &:focus-within{
 					cursor: pointer;
 					path {
 						fill: var(--primary-white);

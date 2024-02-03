@@ -35,7 +35,7 @@
 
 		transition: all 0.3s ease-in-out;
 
-		&:hover {
+		&:hover, &:focus, &:active, &:focus-within{
 			transform: scale(1.1);
 			cursor: pointer;
 			&::before {

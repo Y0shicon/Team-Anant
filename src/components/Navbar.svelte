@@ -105,7 +105,7 @@
 				transition: transform 0.3s ease-in-out;
 			}
 
-			&:hover {
+			&:hover , &:focus, &:active, &:focus-within{
 				cursor: pointer;
 
 				img {
@@ -135,7 +135,7 @@
 					transition: width 0.3s ease-in-out;
 				}
 
-				&:hover::after {
+				&:hover::after , &:focus::after, &:active::after, &:focus-within::after{
 					width: 100%;
 				}
 			}

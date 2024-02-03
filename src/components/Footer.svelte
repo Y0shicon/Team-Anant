@@ -49,7 +49,7 @@
 				path {
 					transition: all 0.3s ease-in-out;
 				}
-				&:hover {
+				&:hover , &:focus{
 					path {
 						fill: var(--primary-orange);
 					}
