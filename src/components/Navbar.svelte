@@ -42,9 +42,25 @@
 </script>
 
 <nav class="navbar">
-	<div class="logo">
+	<button
+		class="logo"
+		on:click={() => {
+			if (window.location.pathname === '/') {
+				window.scrollTo(0, 0);
+			} else {
+				window.location.href = '/';
+			}
+		}}
+		on:keydown={(event) => {
+			if (window.location.pathname === '/') {
+				window.scrollTo(0, 0);
+			} else {
+				window.location.href = '/';
+			}
+		}}
+	>
 		<img src={logo} alt="Logo" />
-	</div>
+	</button>
 	<div class="links">
 		<a href="/">Home</a>
 		<a href="/about">About</a>
@@ -105,7 +121,10 @@
 				transition: transform 0.3s ease-in-out;
 			}
 
-			&:hover , &:focus, &:active, &:focus-within{
+			&:hover,
+			&:focus,
+			&:active,
+			&:focus-within {
 				cursor: pointer;
 
 				img {
@@ -135,7 +154,10 @@
 					transition: width 0.3s ease-in-out;
 				}
 
-				&:hover::after , &:focus::after, &:active::after, &:focus-within::after{
+				&:hover::after,
+				&:focus::after,
+				&:active::after,
+				&:focus-within::after {
 					width: 100%;
 				}
 			}
