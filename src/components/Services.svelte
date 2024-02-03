@@ -32,8 +32,8 @@
 <section id="serviceWrapper">
 	<h1 class="title" use:slideIn>SERVICES I OFFER</h1>
 	<div class="container">
-		<div class="translator">
-			<div class="service" use:scale>
+		<div class="translator" use:scale>
+			<div class="service">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="97"
@@ -49,7 +49,7 @@
 				<h2 class="serviceName">Graphic Designing</h2>
 				<span class="serviceDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
 			</div>
-			<div class="service" use:scale>
+			<div class="service">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="98"
@@ -65,7 +65,7 @@
 				<h2 class="serviceName">Graphic Designing</h2>
 				<span class="serviceDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
 			</div>
-			<div class="service" use:scale>
+			<div class="service">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="88"

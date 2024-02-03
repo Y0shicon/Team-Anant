@@ -11,7 +11,7 @@ function ensureIntersectionObserver() {
 
 				if (eventName === 'enterViewport') {
 					entry.target.classList.add('in-viewport');
-				}
+				} 
 				// else {
 				// 	entry.target.classList.remove('in-viewport');
 				// }

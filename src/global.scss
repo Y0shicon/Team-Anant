@@ -33,6 +33,10 @@
 	}
 }
 
+section{
+	overflow-x: hidden;
+}
+
 body {
 	background-color: var(--secondary-black);
 	margin: 0;
