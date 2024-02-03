@@ -1,9 +1,9 @@
 <script>
-	import {fade, slideIn, scale} from '$utils/useViewport.js';
+	import { onMount } from "svelte";
 </script>
 
-<section class="intro" use:fade>
-	<aside class="socialsWrapper">
+<section class="intro">
+	<aside class="socialsWrapper landing-fade" >
 		<div class="line" />
 		<div class="socials">
 			<svg
@@ -46,7 +46,7 @@
 		<div class="line" />
 	</aside>
 	<main>
-		<article class="textInfo">
+		<article class="textInfo landing-fade">
 			<span class="preText">Hello, I am</span>
 			<h1>PERSON ABC</h1>
 			<span class="postText">Lorem ipsum sit dolor amet..</span>
@@ -57,7 +57,7 @@
 			</div>
 		</article>
 
-		<div class="imgContainer"></div>
+		<div class="imgContainer landing-slide landing-fade"></div>
 	</main>
 </section>
 
@@ -69,6 +69,10 @@
 		padding: 0 5%;
 
 		display: flex;
+
+		// opacity: 0;
+
+		transition: all 0.2s ease-in-out;
 
 		.socialsWrapper {
 			width: 100px;
@@ -216,6 +220,36 @@
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
+	}
+
+	.landing-fade {
+		opacity: 1;
+		animation: fadeIn 1s ease-in-out;
+	}
+
+	.landing-slide {
+		transform: translateX(0);
+		animation: slideIn 1.2s ease-out;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideIn {
+		from {
+			opacity: 0;
+			transform: translateX(100px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 
 	@media screen and (max-width: 1500px) {

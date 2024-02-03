@@ -1,4 +1,6 @@
 <script>
+	import { fade, slideIn, scale } from '$utils/useViewport.js';
+
 	import Client from '$components/Client.svelte';
 	import { data } from '$utils/clients.js';
 
@@ -23,7 +25,7 @@
 </script>
 
 <section id="clients">
-	<h1 class="title">WHAT MY CLIENTS SAY..</h1>
+	<h1 class="title" use:slideIn>WHAT MY CLIENTS SAY..</h1>
 	<div class="clientContainer">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +45,7 @@
 				fill-opacity="0.7"
 			/>
 		</svg>
-		<div class="clientsWrapper">
+		<div class="clientsWrapper" use:fade>
 			<div class="clientList">
 				{#each data as client (client.id)}
 					<Client {client} />
@@ -98,19 +100,22 @@
 
 		gap: 60px;
 
-        svg {
-            cursor: pointer;
+		svg {
+			cursor: pointer;
 
-            &:hover , &:focus, &:active, &:focus-visible {
-                outline: none;
-                path{
-                    fill-opacity: 1;
-                }
-            }
-        }
+			&:hover,
+			&:focus,
+			&:active,
+			&:focus-visible {
+				outline: none;
+				path {
+					fill-opacity: 1;
+				}
+			}
+		}
 
-        @media screen and (max-width: 768px){
-            gap: 30px;
+		@media screen and (max-width: 768px) {
+			gap: 30px;
 		}
 	}
 
@@ -124,8 +129,8 @@
 
 		overflow: hidden;
 
-        @media screen and (max-width: 768px){
-            width: 100%;
+		@media screen and (max-width: 768px) {
+			width: 100%;
 		}
 	}
 

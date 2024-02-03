@@ -9,11 +9,12 @@ function ensureIntersectionObserver() {
 				const eventName = entry.isIntersecting ? 'enterViewport' : 'exitViewport';
 				entry.target.dispatchEvent(new CustomEvent(eventName));
 
-				if (entry.isIntersecting) {
+				if (eventName === 'enterViewport') {
 					entry.target.classList.add('in-viewport');
-				} else {
-					entry.target.classList.remove('in-viewport');
 				}
+				// else {
+				// 	entry.target.classList.remove('in-viewport');
+				// }
 			});
 		},
 		{

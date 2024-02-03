@@ -1,7 +1,5 @@
 <script>
-	import { fade, scale } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
-
+	import { fade, slideIn, scale } from '$utils/useViewport.js';
 	export let project;
 
 	import portfolio from '$assets/projects/portfolio.png';
@@ -15,13 +13,10 @@
 	} else if (project.image === 'social-media.png') {
 		project.image = social;
 	}
+
 </script>
 
-<div
-	in:fade={{ duration: 300, delay: 100, easing: quintOut }}
-	class="project"
-	style="background-image: url({project.image});"
-></div>
+<div use:scale class="project" style="background-image: url({project.image});"></div>
 
 <style lang="scss">
 	.project {

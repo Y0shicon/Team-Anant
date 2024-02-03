@@ -104,9 +104,11 @@ button {
 
 .scale {
 	transform: scale(0);
-	transition: transform 1s ease-in-out;
+	opacity: 0;
+	transition: transform 1s ease-in-out, opacity 1s ease-out;
 
 	&.in-viewport {
 		transform: scale(1);
+		opacity: 1;
 	}
 }

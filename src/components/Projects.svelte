@@ -2,6 +2,8 @@
 	import { projects } from '$utils/projects';
 	import Project from './Project.svelte';
 
+	import { fade, slideIn, scale } from '$utils/useViewport.js';
+
 	let tab = 'graphic';
 	let data = [];
 	$: {
@@ -24,7 +26,7 @@
 </script>
 
 <section id="projectWrapper">
-	<h1 class="title">MY PROJECTS</h1>
+	<h1 class="title" use:slideIn>MY PROJECTS</h1>
 	<div class="projectContainer">
 		<div class="tabList">
 			<button data-tab="graphic" on:click={changeTab} class="tab active"

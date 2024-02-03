@@ -5,6 +5,8 @@
 		isMessageValid = false,
 		success = false;
 
+	import { fade, slideIn, scale } from '$utils/useViewport.js';
+
 	$: data = { name, email, message };
 
 	// Form Validation
@@ -65,7 +67,7 @@
 	<h1 class="title">GET IN TOUCH</h1>
 	<div class="contactContainer">
 		<div class="form">
-			<form action="" on:submit|preventDefault={handleSubmit}>
+			<form use:scale action="" on:submit|preventDefault={handleSubmit}>
 				<div class="inputWrapper">
 					<!-- <label for="name">Name</label> -->
 					<input
@@ -100,19 +102,19 @@
 		</div>
 		<div class="line"></div>
 		<div class="contactInfo">
-			<div class="infoWrapper">
+			<div class="infoWrapper" use:slideIn>
 				<h3 class="infoTitle">Phone</h3>
 				<p class="info">+91 98876 52232</p>
 			</div>
-			<div class="infoWrapper">
+			<div class="infoWrapper" use:slideIn>
 				<h3 class="infoTitle">Email</h3>
 				<p class="info">abcperson@gmail.com</p>
 			</div>
-			<div class="infoWrapper">
+			<div class="infoWrapper" use:slideIn>
 				<h3 class="infoTitle">Address</h3>
 				<p class="info">H 213, ABC Street, Delhi, India</p>
 			</div>
-			<div class="infoWrapper">
+			<div class="infoWrapper" use:slideIn>
 				<h3 class="infoTitle">Social Media</h3>
 				<div class="socials">
 					<svg

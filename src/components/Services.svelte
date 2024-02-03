@@ -1,37 +1,39 @@
 <script>
-    // Adding carouse functionality to the left and right button
-    import { onMount } from 'svelte';
+	// Adding carouse functionality to the left and right button
+	import { onMount } from 'svelte';
 
-    let index = 0;
-    let translate = 35;
+	import { fade, slideIn, scale } from '$utils/useViewport.js';
 
-    onMount(() => {
-        const leftBtn = document.querySelector('.leftBtn');
-        const rightBtn = document.querySelector('.rightBtn');
+	let index = 0;
+	let translate = 35;
 
-        rightBtn.addEventListener('click', () => {
-            if (index < 2) {
-                index++;
-                translate -= 35;
-                document.querySelector('.translator').style.transform = `translateX(${translate}%)`;
-            }
-        });
+	onMount(() => {
+		const leftBtn = document.querySelector('.leftBtn');
+		const rightBtn = document.querySelector('.rightBtn');
 
-        leftBtn.addEventListener('click', () => {
-            if (index > 0) {
-                index--;
-                translate += 35;
-                document.querySelector('.translator').style.transform = `translateX(${translate}%)`;
-            }
-        });
-    });
+		rightBtn.addEventListener('click', () => {
+			if (index < 2) {
+				index++;
+				translate -= 35;
+				document.querySelector('.translator').style.transform = `translateX(${translate}%)`;
+			}
+		});
+
+		leftBtn.addEventListener('click', () => {
+			if (index > 0) {
+				index--;
+				translate += 35;
+				document.querySelector('.translator').style.transform = `translateX(${translate}%)`;
+			}
+		});
+	});
 </script>
 
 <section id="serviceWrapper">
-	<h1 class="title">SERVICES I OFFER</h1>
+	<h1 class="title" use:slideIn>SERVICES I OFFER</h1>
 	<div class="container">
 		<div class="translator">
-			<div class="service">
+			<div class="service" use:scale>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="97"
@@ -47,7 +49,7 @@
 				<h2 class="serviceName">Graphic Designing</h2>
 				<span class="serviceDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
 			</div>
-			<div class="service">
+			<div class="service" use:scale>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="98"
@@ -63,7 +65,7 @@
 				<h2 class="serviceName">Graphic Designing</h2>
 				<span class="serviceDesc"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
 			</div>
-			<div class="service">
+			<div class="service" use:scale>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="88"
@@ -82,36 +84,36 @@
 		</div>
 	</div>
 
-		<div class="navigation">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="61"
-				height="36"
-				viewBox="0 0 61 36"
-				fill="none"
-                class="leftBtn"
-			>
-				<path
-					d="M18.7964 24.3994H59.3282C60.2178 24.3994 60.9391 23.5382 60.9391 22.4761V13.5006C60.9391 12.4385 60.2178 11.5773 59.3282 11.5773H18.7964V4.1952C18.7964 0.768184 15.3262 -0.948047 13.2966 1.47516L1.74421 15.2683C0.486 16.7706 0.486 19.2061 1.74421 20.7082L13.2966 34.5014C15.3261 36.9246 18.7964 35.2084 18.7964 31.7814V24.3994Z"
-					fill="white"
-					fill-opacity="0.7"
-				/>
-			</svg>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="61"
-				height="37"
-				viewBox="0 0 61 37"
-				fill="none"
-                class="rightBtn"
-			>
-				<path
-					d="M42.9602 12.2242L2.42835 12.2242C1.53876 12.2242 0.817503 13.0853 0.817503 14.1475L0.817504 23.1229C0.817504 24.185 1.53876 25.0462 2.42836 25.0462L42.9602 25.0462L42.9602 32.4283C42.9602 35.8554 46.4304 37.5716 48.46 35.1484L60.0124 21.3552C61.2706 19.8529 61.2706 17.4174 60.0124 15.9153L48.46 2.12214C46.4305 -0.301066 42.9602 1.41516 42.9602 4.84218L42.9602 12.2242Z"
-					fill="white"
-					fill-opacity="0.7"
-				/>
-			</svg>
-		</div>
+	<div class="navigation">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="61"
+			height="36"
+			viewBox="0 0 61 36"
+			fill="none"
+			class="leftBtn"
+		>
+			<path
+				d="M18.7964 24.3994H59.3282C60.2178 24.3994 60.9391 23.5382 60.9391 22.4761V13.5006C60.9391 12.4385 60.2178 11.5773 59.3282 11.5773H18.7964V4.1952C18.7964 0.768184 15.3262 -0.948047 13.2966 1.47516L1.74421 15.2683C0.486 16.7706 0.486 19.2061 1.74421 20.7082L13.2966 34.5014C15.3261 36.9246 18.7964 35.2084 18.7964 31.7814V24.3994Z"
+				fill="white"
+				fill-opacity="0.7"
+			/>
+		</svg>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="61"
+			height="37"
+			viewBox="0 0 61 37"
+			fill="none"
+			class="rightBtn"
+		>
+			<path
+				d="M42.9602 12.2242L2.42835 12.2242C1.53876 12.2242 0.817503 13.0853 0.817503 14.1475L0.817504 23.1229C0.817504 24.185 1.53876 25.0462 2.42836 25.0462L42.9602 25.0462L42.9602 32.4283C42.9602 35.8554 46.4304 37.5716 48.46 35.1484L60.0124 21.3552C61.2706 19.8529 61.2706 17.4174 60.0124 15.9153L48.46 2.12214C46.4305 -0.301066 42.9602 1.41516 42.9602 4.84218L42.9602 12.2242Z"
+				fill="white"
+				fill-opacity="0.7"
+			/>
+		</svg>
+	</div>
 </section>
 
 <style lang="scss">
@@ -151,11 +153,11 @@
 			justify-content: center;
 			align-items: center;
 
-            transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;
 
-            @media screen and (max-width: 1200px) and (min-width: 1000px) {
-                gap: 30px;
-            }
+			@media screen and (max-width: 1200px) and (min-width: 1000px) {
+				gap: 30px;
+			}
 
 			@media screen and (max-width: 1000px) {
 				transform: translateX(35%);
@@ -177,7 +179,7 @@
 		align-items: center;
 
 		border: 2px solid var(--primary-orange);
-        border-radius: 10px;
+		border-radius: 10px;
 
 		svg {
 			width: 80px;
@@ -205,9 +207,9 @@
 			}
 		}
 
-        @media screen and (max-width : 1200px) and (min-width :1000px) {
-            height: 250px;
-        }
+		@media screen and (max-width: 1200px) and (min-width: 1000px) {
+			height: 250px;
+		}
 	}
 
 	.navigation {
@@ -222,10 +224,10 @@
 
 		padding: 0 5%;
 
-        display: none;
+		display: none;
 
-        @media screen and (max-width: 1000px) {
-            display: flex;
-        }
+		@media screen and (max-width: 1000px) {
+			display: flex;
+		}
 	}
 </style>
