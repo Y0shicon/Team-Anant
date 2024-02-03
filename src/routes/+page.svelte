@@ -6,6 +6,8 @@
     import Clients from '$components/Clients.svelte';
     import Contact from '$components/Contact.svelte';
     import Footer from '$components/Footer.svelte';
+
+    import CustomCursor from '$components/CustomCursor.svelte';
 </script>
 
 <Intro />
@@ -15,4 +17,6 @@
 <Clients />
 <Contact />
 <Footer />
+
+<CustomCursor />
 
