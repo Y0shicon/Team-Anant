@@ -5,16 +5,16 @@
 		const cursor = document.querySelector('.cursor');
 		const dot = document.querySelector('.dot');
 		document.addEventListener('mousemove', (e) => {
-			cursor.style.top = e.clientY + 'px';
-			cursor.style.left = e.clientX + 'px';
+			setTimeout(() => {
+				cursor.style.top = e.clientY + 'px';
+				cursor.style.left = e.clientX + 'px';
+			}, 100);
 		});
 
 		// Add a delay to the dot
 		document.addEventListener('mousemove', (e) => {
-			setTimeout(() => {
-				dot.style.top = e.clientY + 'px';
-				dot.style.left = e.clientX + 'px';
-			}, 140);
+			dot.style.top = e.clientY + 'px';
+			dot.style.left = e.clientX + 'px';
 		});
 
 		// Add hover class on hovering over buttons or svg or a tags
@@ -66,6 +66,8 @@
 		transform: translate(-50%, -50%);
 		pointer-events: none;
 		z-index: 999;
+
+		mix-blend-mode: difference;
 
 		@media screen and (max-width: 768px) {
 			display: none;
